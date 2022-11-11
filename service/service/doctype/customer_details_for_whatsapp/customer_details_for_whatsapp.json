@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-02 10:42:42.552876",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "whatsapp_no",
+  "send_message"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fetch_if_empty": 1,
+   "fieldname": "whatsapp_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "whatsapp_no",
+   "mandatory_depends_on": "eval: doc.send_message"
+  },
+  {
+   "columns": 2,
+   "default": "1",
+   "fieldname": "send_message",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Send Message"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-02 10:42:42.552876",
+ "modified_by": "Administrator",
+ "module": "Service",
+ "name": "Customer Details for Whatsapp",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

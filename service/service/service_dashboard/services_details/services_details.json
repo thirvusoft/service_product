@@ -1,0 +1,29 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Daily Services Count",
+   "width": "Half"
+  },
+  {
+   "chart": "Open Service Tasks",
+   "width": "Half"
+  },
+  {
+   "chart": "Completed Service Tasks",
+   "width": "Half"
+  }
+ ],
+ "creation": "2022-11-04 15:29:59.416366",
+ "dashboard_name": "Services Details",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2022-11-04 15:32:25.629799",
+ "modified_by": "Administrator",
+ "module": "Service",
+ "name": "Services Details",
+ "owner": "Administrator"
+}

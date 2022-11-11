@@ -1,0 +1,26 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-11-04 11:19:40.491273",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-11-04 11:19:40.491273",
+ "modified_by": "Administrator",
+ "module": "Service",
+ "name": "Service Details Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Service",
+ "report_name": "Service Details Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

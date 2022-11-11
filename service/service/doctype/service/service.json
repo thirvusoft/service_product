@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SER-.###",
+ "creation": "2022-11-02 09:52:40.518330",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_detailss_section",
+  "customer",
+  "payment_type",
+  "party_type",
+  "party_name",
+  "whatsapp_no",
+  "expected_delivery_date",
+  "column_break_5",
+  "posting_date",
+  "company",
+  "status",
+  "column_break_8",
+  "advance_amount",
+  "barcode",
+  "service_item_details_section",
+  "service_item",
+  "brand",
+  "column_break_16",
+  "capacity",
+  "item_count",
+  "column_break_20",
+  "service_type",
+  "employee_details_section",
+  "received_employee",
+  "column_break_21",
+  "column_break_27",
+  "completed_employee",
+  "warranty_details_section",
+  "invoice_no",
+  "column_break_31",
+  "warranty_status",
+  "column_break_33",
+  "warranty_issuse",
+  "notes_section",
+  "repair_details",
+  "column_break_29",
+  "service_details",
+  "section_break_31",
+  "required_items",
+  "section_break_33",
+  "total_qty",
+  "column_break_35",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_detailss_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Detailss"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer ",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "whatsapp_no",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "fieldtype": "Date",
+   "label": "Expected Delivery Date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Barcode",
+   "label": "Barcode",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nOn Process\nCompleted\nReady For Delivery\nOverdue\nGoods Delivered\nScrapped\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "advance_amount",
+   "fieldtype": "Float",
+   "label": "Advance Amount"
+  },
+  {
+   "fieldname": "service_item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Service Item Details"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Data",
+   "label": "Service Item"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Data",
+   "label": "Service Type"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "item_count",
+   "fieldtype": "Data",
+   "label": "Item Count"
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "received_employee",
+   "fieldtype": "Link",
+   "label": "Received Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completed_employee",
+   "fieldtype": "Link",
+   "label": "Completed Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "warranty_details_section",
+   "fieldtype": "Section Break",
+   "label": "Warranty Details"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Link",
+   "label": "Invoice No",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "warranty_status",
+   "fieldtype": "Data",
+   "label": "Warranty Status",
+   "translatable": 1
+  },
+  {
+   "fieldname": "warranty_issuse",
+   "fieldtype": "Small Text",
+   "label": "Warranty Issuse"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "repair_details",
+   "fieldtype": "Text Editor",
+   "label": "Repair Details"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_details",
+   "fieldtype": "Text Editor",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "required_items",
+   "fieldtype": "Table",
+   "label": "Required Items",
+   "options": "Required Items for Service"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Payment Type"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "party_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Party Type",
+   "translatable": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Party Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-08 09:50:06.342590",
+ "modified_by": "Administrator",
+ "module": "Service",
+ "name": "Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
