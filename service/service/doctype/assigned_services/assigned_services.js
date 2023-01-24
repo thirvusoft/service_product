@@ -52,7 +52,7 @@ function total_qty_and_amount(frm) {
         total_amt = 0;
     (frm.doc.required_items || []).forEach((row) => {
         total_qty += row.qty || 0;
-        total_amt = total_qty * row.amount;
+        total_amt = total_qty * row.rate;
     });
     frm.set_value("total_qty", total_qty);
     frm.set_value("total_amount", total_amt);

@@ -17,6 +17,8 @@
   "required_items",
   "section_break_8",
   "service_details",
+  "total_qty",
+  "total_amount",
   "amended_from"
  ],
  "fields": [
@@ -87,12 +89,22 @@
    "fieldname": "reference_doc",
    "fieldtype": "Data",
    "label": "Reference Doc"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-11-08 10:39:27.402561",
+ "modified": "2023-01-24 11:25:37.806891",
  "modified_by": "Administrator",
  "module": "Service",
  "name": "Assigned Services",
