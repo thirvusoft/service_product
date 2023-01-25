@@ -158,8 +158,6 @@ function amountcalc(frm, cdt, cdn) {
 }
 
 function create_payment_entry(frm) {
-    console.log(cur_frm.doc.doctype)
-    console.log(cur_frm.doc.name)
     return frappe.call({
         method:
         "service.service.doctype.service.service.get_payment_entry",
