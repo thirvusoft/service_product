@@ -39,13 +39,13 @@ class Service(Document):
 
 			new_doc.insert()
 		else:
-			print("dgdgdjgadjadb")
+			
 			assignedservice=frappe.get_all("Assigned Services",filters={"reference_doc":self.name})
-			print(assignedservice)
+			
 			for i in assignedservice:
-				print(i)
+				
 				servicedoc=frappe.get_doc("Assigned Services",i["name"])
-				print(servicedoc)
+				
 				servicedoc.update({			
 				"assigned_date":self.posting_date,
 				"expected_delivery_date":self.expected_delivery_date,
@@ -53,12 +53,12 @@ class Service(Document):
 				})
 				servicedoc.set("required_items", [])
 				for i in self.required_items:
-					print(i)
+					
 					servicedoc.append("required_items", {"item_code": i.item_code or "", "qty": i.qty or "","amount":i.amount or ""
 	})
 				servicedoc.insert()
 				servicedoc.save()
-				print(servicedoc)
+				
 	def on_submit(self):
 		if(not self.docstatus==1 and not self.status=="Completed"):
 			frappe.throw("Completed Status Only Move to Submitted")
@@ -147,8 +147,8 @@ def make_sales_invoice(source_name, target_doc=None):
 	
 @frappe.whitelist()
 def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=None):
-	print("jjjjjjjjjjjjjjjjjjjjjjjjjj")
-	print(dn)
+	
+	
 	reference_doc = None
 	doc = frappe.get_doc(dt, dn)
 	
@@ -166,7 +166,7 @@ def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=No
 		dt, party_account_currency, bank, outstanding_amount, payment_type, bank_amount, doc)
 
 	paid_amount, received_amount, discount_amount = apply_early_payment_discount(paid_amount, received_amount, doc)
-	print(paid_amount)
+	
 	pe = frappe.new_doc("Payment Entry")
 	pe.payment_type = payment_type
 	pe.company = doc.company
@@ -260,12 +260,10 @@ def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=No
 
 # @frappe.whitelist()
 # def make_payment_entry(source_name, target_doc=None):
-# 	print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+# 	
 # 	company = frappe.db.get_single_value("Global Defaults", "default_company")
 # 	paid_to = frappe.db.get_value("Company", company, "default_cash_account")
 # 	paid_from=frappe.db.get_value("Company", company, "default_receivable_account")
-# 	# print(cash_account)
-# 	# print(receivable_account)
 # 	doc = get_mapped_doc(
 		
 # 		"Service",
@@ -298,12 +296,8 @@ def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=No
 
 # @frappe.whitelist()
 # def make_assigned_employee(posting_date,delivery_date,employee,table=None,reference=None):
-# 	print(reference)
-	
-# 	print(posting_date)
+
 # 	if not frappe.db.exists("Assigned Services", {"reference_doc": reference}):
-# 		print(frappe.db.exists("Assigned Services", {"reference_doc": reference}))
-# 		print("jbkvjdbjvdb")
 # 		new_doc=frappe.new_doc("Assigned Services")
 # 		new_doc.assigned_date=posting_date,
 # 		new_doc.expected_delivery_date=delivery_date,
@@ -316,15 +310,10 @@ def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=No
 
 # 		new_doc.insert()
 # 	else:
-# 		print("dgdgdjgadjadb")
 # 		assignedservice=frappe.get_all("Assigned Services",filters={"reference_doc":reference})
-# 		print(assignedservice)
 # 		for i in assignedservice:
-# 			print(i)
 # 			tablevalue=json.loads(table)
-# 			print(tablevalue)
 # 			servicedoc=frappe.get_doc("Assigned Services",i["name"])
-# 			print(servicedoc)
 # 			servicedoc.update({			
 # 			"assigned_date":posting_date,
 # 			"expected_delivery_date":delivery_date,
@@ -333,11 +322,10 @@ def get_payment_entry(dt,dn,party_amount=None, bank_account=None, bank_amount=No
 # 			})
 # 			servicedoc.set("required_items", [])
 # 			for i in tablevalue:
-# 				print(i)
 # 				servicedoc.append("required_items", {"item_code": i["item_code"] or "", "qty": i["qty"] or "","amount":i["amount"] or ""
 # })
 # 			servicedoc.save()
-# 			print(servicedoc)
+
 
 
 
